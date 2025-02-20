@@ -1,0 +1,116 @@
+@import "tailwindcss";
+
+/* src/styles.css */
+
+/* Default (light mode) variables */
+:root {
+  --light-background: #ffffff;
+  --light-text: #1a202c;
+  --light-border: #e2e8f0;
+  --light-active-text: #2b6cb0;
+  --light-button-bg: #38bdf8;
+  --light-button-hover: #0ea5e9;
+  --light-main-bg: #d3d3d3;
+  --light-icon-bg: #e2e2e2;
+  --light-arrow: #000000;
+}
+
+/* Dark mode variables */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --dark-background: #2d3748;
+    --dark-text: #e2e8f0;
+    --dark-border: #4a5568;
+    --dark-active-text: #63b3ed;
+    --dark-button-bg: #63b3ed;
+    --dark-button-hover: #3182ce;
+    --dark-main-bg: #020202;
+    --dark-icon-bg: #3b4658;
+  }
+}
+
+.slick-prev,
+.slick-next {
+  color: var(--light-arrow) !important;
+}
+
+.light-icon-bg {
+  background-color: var(--light-icon-bg);
+}
+
+.bg-main-dark {
+  background-color: var(--dark-main-bg);
+}
+
+.bg-light-dark {
+  background-color: var(--light-main-bg);
+}
+
+/* Use these variables in Tailwind classes */
+.bg-light-background {
+  background-color: var(--light-background);
+}
+
+.text-light-text {
+  color: var(--light-text);
+}
+
+.border-light {
+  border-color: var(--light-border);
+}
+
+.text-light-active {
+  color: var(--light-active-text);
+}
+
+.bg-light-button {
+  background-color: var(--light-button-bg);
+}
+
+.bg-light-button:hover {
+  background-color: var(--light-button-hover);
+}
+
+/* Dark Mode */
+.bg-dark-background {
+  background-color: var(--dark-background);
+}
+
+.text-dark-text {
+  color: var(--dark-text);
+}
+
+.border-dark {
+  border-color: var(--dark-border);
+}
+
+.text-dark-active {
+  color: var(--dark-active-text);
+}
+
+.bg-dark-button {
+  background-color: var(--dark-button-bg);
+}
+
+.bg-dark-button:hover {
+  background-color: var(--dark-button-hover);
+}
+
+/* Custom scrollbar styling */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 12px; /* Width of the scrollbar */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #6b6b6b; /* Scrollbar color */
+  border-radius: 10px; /* Round the scrollbar thumb */
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background-color: transparent; /* Make the track transparent */
+}
+
+.custom-scrollbar {
+  scrollbar-width: thin; /* For Firefox, sets the scrollbar width */
+  scrollbar-color: #6b6b6b transparent; /* For Firefox, sets the scrollbar thumb color and transparent track */
+}
